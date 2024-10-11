@@ -30,3 +30,12 @@
     border-right: 2px solid #ddd;
     padding-right: 1rem; /* Add padding for spacing after the border */
 }
+
+.search__icon i{
+    font-style: 1.6rem;
+    padding: 0.5rem;
+    background: var(--secondary-color);
+    color:#fff;
+    border-radius: 10px 5px 10px 5px;
+    cursor:pointer;
+}
