@@ -9,7 +9,7 @@ const calculateAvgRating = reviews =>{
 
   return{
     totalRating,
-    avgRating
-  }
-}
+    avgRating,
+  };
+};
 export default calculateAvgRating;

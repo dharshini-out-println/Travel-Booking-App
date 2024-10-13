@@ -12,7 +12,7 @@
 }
 .newsletter__content h2{
     font-style: 2.5rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .newsletter__input{
     display: flex;
@@ -20,7 +20,7 @@
     justify-content: space-between;
     background: #fff;
     padding: 0.5rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 5px;
 }
 .newsletter__input input{
@@ -34,7 +34,7 @@
 .newsletter__btn{
     padding: 0.5rem 1.5rem !important;
     background: var(--secondary-color) !important;
-    color:#fff;
+    color:#fff !important;
     font-style: 1.1rem !important;
 }
 .newsletter__content p{
