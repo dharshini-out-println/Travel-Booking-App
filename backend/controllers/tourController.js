@@ -41,13 +41,43 @@ export const updateTour=async(req,res)=>{
 }
 
 export const deleteTour=async(req,res)=>{
+    const id=req.params.id
     try{
-    } catch(err) {}
+      await Tour.findByIdAndDelete(id,);
+      res
+      .status(200)
+      .json({
+         success:true,
+         message:"Successfully deleted",
+      });
+    } catch(err) {
+        res
+        .status(500)
+        .json({
+           success:false,
+           message:"failed to delete",
+        });
+    }
 };
 export const getSingleTour=async(req,res)=>{
+    const id=req.params.id
     try{
-
-    }catch(err) {}
+      const tour=await Tour.findByIdAndDelete(id,);
+      res
+      .status(200)
+      .json({
+         success:true,
+         message:"Successfully deleted",
+         data:tour,
+      });
+    } catch(err) {
+        res
+        .status(404)
+        .json({
+           success:false,
+           message:"not found",
+        });
+    }
 };
 export const getAllTour=async(req,res)=>{
     try{
