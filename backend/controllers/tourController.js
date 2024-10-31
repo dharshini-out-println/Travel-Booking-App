@@ -16,3 +16,41 @@ export const createTour=async(req,res)=>{
          .json({success:false,message:"Failed to create.Try again"});
     }
 };
+
+export const updateTour=async(req,res)=>{
+    const id=req.params.id
+    try{
+      const updatedTour=await Tour.findByIdAndUpdate(id,{
+        $set:req.body
+      },{new:true})
+      res
+      .status(200)
+      .json({
+         success:true,
+         message:"Successfully updated",
+         data:updateTour,
+      });
+    } catch(err) {
+        res
+        .status(500)
+        .json({
+           success:false,
+           message:"failed to update",
+        });
+    }
+}
+
+export const deleteTour=async(req,res)=>{
+    try{
+    } catch(err) {}
+};
+export const getSingleTour=async(req,res)=>{
+    try{
+
+    }catch(err) {}
+};
+export const getAllTour=async(req,res)=>{
+    try{
+
+    } catch(err) {}
+};
